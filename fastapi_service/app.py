@@ -15,11 +15,11 @@ def fetch_news(ticker: str, limit: int):
     response = requests.post(MAGE_PIPELINE_URL, json={"ticker": ticker, "limit": limit})
 
     if response.status_code != 200:
-        raise HTTPException(status_code=500, detail="خطأ في تشغيل Pipeline")
+        raise HTTPException(status_code=500, detail="Pipeline startup error")
 
     df = pd.read_csv("data/ranked_stocks.csv")  # تحميل البيانات الناتجة
 
-    # 🎨 رسم المخطط البياني
+    #  Chart drawing
     plt.figure(figsize=(10, 6))
     plt.barh(df["name_stock"], df["weighted_sentiment"], color="blue")
     plt.xlabel("التقييم")
@@ -27,7 +27,7 @@ def fetch_news(ticker: str, limit: int):
     plt.title("ترتيب الأسهم")
     plt.gca().invert_yaxis()
 
-    # حفظ الصورة وإرجاعها
+   # Save and restore image
     img_io = BytesIO()
     plt.savefig(img_io, format="png")
     img_io.seek(0)
