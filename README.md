@@ -38,10 +38,15 @@ API Serving: The results are served via a fast api for integration with investme
 
 Installation & Setup
 1. Install dependencies
+   
    pip install -r requirements.txt
+   
 2. Train model
+   
    python models.train_model.py
+   
 3. Run the FastAPI server
+   
    uvicorn src.api:app --reload
 
 Stock Ranking Example Output
