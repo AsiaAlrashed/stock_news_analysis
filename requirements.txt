@@ -1,5 +1,5 @@
 mage_ai
-torch
+torch == 2.6.0
 tensorflow == 2.18.0
 uvicorn == 0.34.0
 fastapi == 0.115.8
