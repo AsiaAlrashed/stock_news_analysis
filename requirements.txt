@@ -1,6 +1,6 @@
 mage_ai
 torch == 2.6.0
-tensorflow == 2.18.0
+transformers == 4.48.3
 uvicorn == 0.34.0
 fastapi == 0.115.8
 numpy == 1.26.4
