@@ -1,0 +1,7 @@
+mage_ai
+torch
+tensorflow == 2.18.0
+uvicorn == 0.34.0
+fastapi == 0.115.8
+numpy == 1.26.4
+pandas == 2.2.3
