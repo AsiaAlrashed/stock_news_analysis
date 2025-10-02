@@ -1,6 +1,6 @@
 from news_fetcher import NewsFetcher
 from stock_fetcher import StockFetcher
-from data_processor import DataProcessor
+from feature_extraction import DataProcessor
 from utils import DataUtils
 import pandas as pd
 
@@ -79,3 +79,4 @@ if __name__ == "__main__":
     tickers = ["TSLA", "AAPL", "MSFT", "AMZN"]
     data_loader = DataLoad(tickers, news_limit=1000)
     data_loader.run()
+
